@@ -23,6 +23,7 @@ Cookie Clicker のプログラムコードを書き換えることによって�
 
 - [本家サイト](http://orteil.dashnet.org/cookieclicker/)
 - [日本語版](http://natto0wtr.web.fc2.com/CookieClicker/)
+- [日本語版 wiki](https://w.atwiki.jp/cookieclickerjpn/)
 - [コード](./src/main.js)
 
 ### 準備(ブラウザの開発コンソールを出す)
