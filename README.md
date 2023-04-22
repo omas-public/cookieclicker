@@ -41,7 +41,7 @@ Cookie Clicker のプログラムコードを書き換えることによって�
 
 
 ``` js
-Game.Prompt('Hack this site! wwwwwwwwwww')
+Game.Prompt('Hack this site! wwwwwwwwwww', 0)
 ```
 
 #### Try it!
@@ -117,6 +117,11 @@ Game.wrinklers[0].phase = 1
 - [0] の部分を 他の数字[1 - ?]に置き換えるとどうなるか確認しよう
 - phase = 1 の部分を type や hp , suck に 置き換えて 数字を書き換えてみよう
 
+hint
+```js
+Object.keys(Game.wrinklers[0])
+```
+
 #### すべての虫を一回で出現させる
 
 ```js  
@@ -139,7 +144,7 @@ Game.earn(n)      // n は任意の数字
 #### 単一の買い物をする
 
 ```js
-Game.object['Cursor'].buy(1);
+Game.Objects['Cursor'].buy(1);
 ```
 
 ### Try it!
@@ -147,7 +152,11 @@ Game.object['Cursor'].buy(1);
 - buy(n) の 数値を変えてみよう
 - 'Cursor' を 変えてみよう
 
+```js
+Object.keys(Game.Objects)
+```
 [施設一覧](https://w.atwiki.jp/cookieclickerjpn/pages/7.html)
+
 
 
 ### すべての称号を得る
