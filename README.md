@@ -106,6 +106,12 @@ clearInterval(timer1)
 
 もっと早く動かしてみよう(今は1000ミリ秒 -> 1秒 に一回だから)
 
+### Golden Cookieを出してみよう
+
+```js
+golden = new Game.shimmer('golden')
+```
+
 ### 虫を出してみよう
 
 ```js
@@ -120,6 +126,7 @@ Game.wrinklers[0].phase = 1
 hint
 ```js
 Object.keys(Game.wrinklers[0])
+['id', 'close', 'sucked', 'phase', 'x', 'y', 'r', 'hurt', 'hp', 'selected', 'type']
 ```
 
 #### すべての虫を一回で出現させる
@@ -144,26 +151,19 @@ Game.earn(n)      // n は任意の数字
 #### 単一の買い物をする
 
 ```js
-Game.Objects['Cursor'].buy(1);
+Game.Objects['カーソル'].buy(1);
 ```
 
 ### Try it!
 
 - buy(n) の 数値を変えてみよう
-- 'Cursor' を 変えてみよう
+- 'カーソル' を 変えてみよう
 
 ```js
 Object.keys(Game.Objects)
+['カーソル', 'グランマ', '農場', '鉱山', '工場', '銀行', '神殿', '魔法使いの塔', '宇宙船', '錬金術室', 'ポータル', 'タイムマシン', '反物質凝縮器', 'プリズム', 'チャンスメーカー', '自己無限生成エンジン', 'Javascriptコンソール', '遊休宇宙']
 ```
 [施設一覧](https://w.atwiki.jp/cookieclickerjpn/pages/7.html)
-
-
-
-### すべての称号を得る
-
-```js
-Game.AchievementsById.forEach(e => e.won=1)
-```
 
 ### すべての施設の開放
 
@@ -175,9 +175,15 @@ Game.UpgradesById.forEach(e => Game.Unlock(e.name))
 #### すべての施設を購入
 
 ```js
-Object.keys(Game.Objects).forEach(e => Game.Objects[e].buy(n))
+Object.keys(Game.Objects).forEach(e => Game.Objects[e].buy(1))
 ```
 
+
+### すべての称号を得る
+
+```js
+Game.AchievementsById.forEach(e => e.won=1)
+```
 
 
 ### 最後に
